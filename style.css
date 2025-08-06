@@ -1,6 +1,6 @@
-/* 共通設定 */
+/* Google Fonts 使用を前提に */
 body {
-  font-family: 'Helvetica Neue', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,7 +10,7 @@ body {
 
 /* ヘッダー（トップメッセージ） */
 .hero {
-  background: linear-gradient(to bottom right, #ffe9d6, #fff2e6);
+  background-color: #fff2e6;
   color: #4a322d;
   text-align: center;
   padding: 3rem 1rem;
@@ -18,7 +18,6 @@ body {
 
 .hero h1 {
   font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
@@ -31,7 +30,7 @@ body {
 .section {
   padding: 2rem 1.5rem;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
 }
 
 .section h2 {
@@ -39,13 +38,6 @@ body {
   margin-bottom: 1rem;
   border-bottom: 2px solid #f4c095;
   display: inline-block;
-  padding-bottom: 0.2rem;
-  position: relative;
-}
-
-.section h2::before {
-  content: "🔸";
-  margin-right: 0.5rem;
 }
 
 /* 技術スタック */
@@ -60,73 +52,46 @@ body {
 .tech-list li {
   background-color: #ffe9d6;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 1rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tech-list li::before {
-  content: "▶️";
-  font-size: 0.9rem;
 }
 
 /* プロジェクト一覧 */
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .project {
   background-color: #fff7f2;
   padding: 1rem;
   border-left: 4px solid #f4a261;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .project h3 {
   margin-top: 0;
   color: #3d2b1f;
-}
-
-.project p {
-  margin-bottom: 0.5rem;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-top: 0.5rem;
-}
-
-/* PC向け：画像とテキストの横並び */
-@media (min-width: 768px) {
-  .project {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .project img {
-    width: 100%;
-  }
+  background: linear-gradient(to right, #ffe9d6, #fff2e6);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 .project a {
   display: inline-block;
-  margin-top: 0.5rem;
-  color: #e76f51;
+  margin-top: 0.8rem;
+  background-color: #f4a261;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .project a:hover {
-  text-decoration: underline;
+  background-color: #e76f51;
 }
 
 /* フッター（お問い合わせ） */
@@ -137,32 +102,19 @@ body {
   padding: 2rem 1rem;
 }
 
-.footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 .contact-links {
   margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .contact-links a {
-  background-color: #fff2e6;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  margin: 0 1rem;
+  color: #7b341e;
   text-decoration: none;
   font-weight: bold;
-  color: #7b341e;
-  transition: background-color 0.2s ease;
 }
 
 .contact-links a:hover {
-  background-color: #f4c095;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* モバイル対応 */
@@ -171,12 +123,8 @@ body {
     flex-direction: column;
   }
 
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .contact-links a {
+    display: block;
     margin: 0.5rem 0;
   }
 
