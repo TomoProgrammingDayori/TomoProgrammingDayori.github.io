@@ -1,50 +1,43 @@
 /* 共通設定 */
 body {
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.6;
   background-color: #fdfcf9;
   color: #333;
-  letter-spacing: 0.02em;
 }
 
 /* ヘッダー（トップメッセージ） */
 .hero {
-  background: linear-gradient(145deg, #fff2e6, #ffe1cc);
+  background-color: #fff2e6;
   color: #4a322d;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
-  font-size: 1.4rem;
-  font-weight: 600;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /* セクション共通 */
 .section {
-  padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem 5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 3px solid #f4a261;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f4c095;
   display: inline-block;
-  padding-bottom: 0.2em;
-  font-weight: 700;
 }
 
 /* 技術スタック */
@@ -53,16 +46,14 @@ body {
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .tech-list li {
   background-color: #ffe9d6;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   font-size: 1rem;
-  font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 /* プロジェクト一覧 */
@@ -75,39 +66,45 @@ body {
 .project {
   background-color: #fff7f2;
   padding: 1.5rem;
-  border-left: 6px solid #f4a261;
+  border-left: 4px solid #f4a261;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .project h3 {
   margin-top: 0;
-  background: linear-gradient(90deg, #f4a261, #e76f51);
-  color: white;
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 4px;
-  font-size: 1.25rem;
+  color: #3d2b1f;
+  font-size: 1.3rem;
 }
 
 .project p {
-  margin-top: 0.8rem;
-  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
+.project img {
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* CTAリンク（プロジェクト詳細） */
 .project a {
   display: inline-block;
   margin-top: 1rem;
   color: white;
-  background-color: #e76f51;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  background: linear-gradient(90deg, #f4a261, #e76f51);
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
   font-weight: bold;
   text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
 }
 
 .project a:hover {
-  background-color: #d8583c;
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #e76f51, #f4a261);
 }
 
 /* フッター（お問い合わせ） */
@@ -115,12 +112,11 @@ body {
   background-color: #fbe9e7;
   color: #4a322d;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 .footer h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .contact-links {
@@ -150,10 +146,10 @@ body {
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
-  .hero p {
-    font-size: 1.1rem;
+  .section {
+    padding: 2rem 1rem 3rem;
   }
 }
