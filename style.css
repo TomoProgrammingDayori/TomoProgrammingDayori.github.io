@@ -153,3 +153,28 @@ body {
     padding: 2rem 1rem 3rem;
   }
 }
+
+/* フィードバックセクション */
+#feedback {
+  background-color: #fffbe6;
+  border-top: 2px solid #f4c095;
+  border-bottom: 2px solid #f4c095;
+}
+
+/* フォームのiframe調整 */
+#feedback iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 635px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  margin-top: 1.5rem;
+}
+
+/* フォーム下の補足テキスト */
+#feedback p:last-of-type {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  color: #5c4432;
+}
