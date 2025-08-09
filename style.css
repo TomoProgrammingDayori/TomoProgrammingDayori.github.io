@@ -104,10 +104,17 @@ body {
   outline-offset: 2px;
 }
 
-/* 追加：診断ボタンのホバーは専用カラーのまま */
+.cta--lg {
+  padding: 0.85rem 1.6rem; /* 縦も横も余裕を持たせる */
+  font-size: 1.08rem;       /* わずかに拡大して差別化 */
+  font-weight: 700;
+  background: linear-gradient(90deg, #fc4a1a, #f7b733); /* 暖色で目を引く */
+  box-shadow: 0 3px 8px rgba(252,74,26,0.25);           /* 立体感 */
+}
+
 .cta--lg:hover {
-  background: linear-gradient(90deg, #fc4a1a, #f7b733);
-  box-shadow: 0 8px 16px rgba(252,74,26,.28);
+  background: linear-gradient(90deg, #f7b733, #fc4a1a);
+  box-shadow: 0 8px 16px rgba(252,74,26,0.35);
 }
 
 
