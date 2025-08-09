@@ -91,17 +91,26 @@ body {
 .cta:hover {
   transform: translateY(-2px);
   background: linear-gradient(90deg, #e76f51, #f4a261);
-  box-shadow: 0 6px 14px rgba(231,111,81,.22);
+  box-shadow: 0 8px 16px rgba(231,111,81,.28); 
 }
+
 .cta:active {
   transform: translateY(-1px) scale(0.99);
   box-shadow: 0 3px 10px rgba(231,111,81,.18);
 }
+
 .cta:focus-visible {
-  outline: 3px solid rgba(231,111,81,.35);
+  outline: 3px solid rgba(252, 74, 26, 0.35); 
   outline-offset: 2px;
 }
-.cta--lg { padding: 0.75rem 1.4rem; font-size: 1.03rem; }
+
+
+.cta--lg {
+  padding: 0.75rem 1.4rem;
+  font-size: 1.03rem;
+  background: linear-gradient(90deg, #f7b733, #fc4a1a); 
+}
+
 
 /* ========== Feedback / Diagnosis ========== */
 #feedback, #diagnosis {
