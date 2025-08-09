@@ -63,7 +63,7 @@ body {
 .project p  { margin-bottom: 1rem; }
 /* 画像の比率確保（CLS防止） */
 .project img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 2;
   width: 100%;
   height: auto;
   object-fit: cover;
