@@ -17,7 +17,6 @@ body {
   text-align: center;
   padding: 3rem 1rem;
 }
-/* 本文と同じ最大幅に揃える */
 .hero > * { max-width: 900px; margin-left: auto; margin-right: auto; }
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
@@ -25,7 +24,7 @@ body {
 
 /* ========== Section ========== */
 .section {
-  padding: 3rem 1.5rem 4rem;  /* 5rem → 4rem に微調整 */
+  padding: 3rem 1.5rem 4rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -91,32 +90,30 @@ body {
 .cta:hover {
   transform: translateY(-2px);
   background: linear-gradient(90deg, #e76f51, #f4a261);
-  box-shadow: 0 8px 16px rgba(231,111,81,.28); 
+  box-shadow: 0 8px 16px rgba(231,111,81,.28);
 }
-
 .cta:active {
   transform: translateY(-1px) scale(0.99);
   box-shadow: 0 3px 10px rgba(231,111,81,.18);
 }
-
 .cta:focus-visible {
-  outline: 3px solid rgba(252, 74, 26, 0.35); 
+  outline: 3px solid rgba(252, 74, 26, 0.35);
   outline-offset: 2px;
 }
+.cta:visited { color: #fff; }
 
+/* 主役ボタン（無料診断）の通常スタイル */
 .cta--lg {
-  padding: 0.85rem 1.6rem; /* 縦も横も余裕を持たせる */
-  font-size: 1.08rem;       /* わずかに拡大して差別化 */
+  padding: 0.85rem 1.6rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #fc4a1a, #f7b733); /* 暖色で目を引く */
-  box-shadow: 0 3px 8px rgba(252,74,26,0.25);           /* 立体感 */
+  background: linear-gradient(90deg, #fc4a1a, #f7b733);
+  box-shadow: 0 3px 8px rgba(252,74,26,0.25);
 }
-
 .cta--lg:hover {
   background: linear-gradient(90deg, #f7b733, #fc4a1a);
   box-shadow: 0 8px 16px rgba(252,74,26,0.35);
 }
-
 
 /* ========== Feedback / Diagnosis ========== */
 #feedback, #diagnosis {
