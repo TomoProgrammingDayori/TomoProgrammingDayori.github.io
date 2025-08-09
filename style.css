@@ -62,12 +62,17 @@ body {
 .project h3 { margin-top: 0; color: #3d2b1f; font-size: 1.3rem; }
 .project p  { margin-bottom: 1rem; }
 /* 画像の比率確保（CLS防止） */
+/* 画像は原寸比のまま表示、トリミングしない */
 .project img {
-  aspect-ratio: 3 / 2;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  display: block;            /* 余白ズレ防止 */
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.07);
+  /* aspect-ratio: 3 / 2;  ← 削除 */
+  /* object-fit: cover;     ← 削除 */
 }
+
 
 /* プロジェクト内CTAの余白復活 */
 .project .cta { margin-top: 1rem; display: inline-block; }
