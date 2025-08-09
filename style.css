@@ -70,8 +70,10 @@ body {
   height: auto;
 }
 
+/* プロジェクト内CTAの余白復活 */
+.project .cta { margin-top: 1rem; display: inline-block; }
+
 /* ========== CTA（全サイトで統一） ========== */
-/* 以前の .project a と同じ質感を標準化 */
 .cta {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -136,7 +138,7 @@ body {
   .tech-list { flex-direction: column; }
   .contact-links a { display: block; margin: 0.5rem 0; }
   .hero h1 { font-size: 2rem; }
-  .section { padding: 2rem 1rem 3rem; } /* モバイルはさらに軽く */
+  .section { padding: 2rem 1rem 3rem; }
 }
 
 /* ========== Reduce Motion ========== */
