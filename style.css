@@ -109,6 +109,7 @@ body {
   font-weight: 700;
   background: linear-gradient(90deg, #fc4a1a, #f7b733);
   box-shadow: 0 3px 8px rgba(252,74,26,0.25);
+  letter-spacing: .01em;
 }
 .cta--lg:hover {
   background: linear-gradient(90deg, #f7b733, #fc4a1a);
