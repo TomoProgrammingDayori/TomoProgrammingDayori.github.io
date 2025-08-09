@@ -67,6 +67,8 @@ body {
   margin-top: 1rem;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9; /* 比率固定でCLS防止 */
+  object-fit: cover;
 }
 
 /* プロジェクト内CTAの余白復活 */
@@ -97,7 +99,7 @@ body {
   box-shadow: 0 3px 10px rgba(231,111,81,.18);
 }
 .cta:focus-visible {
-  outline: 3px solid rgba(252, 74, 26, 0.35);
+  outline: 3px solid rgba(252, 74, 26, 0.5); /* フォーカス視認性強化 */
   outline-offset: 2px;
 }
 .cta:visited { color: #fff; }
