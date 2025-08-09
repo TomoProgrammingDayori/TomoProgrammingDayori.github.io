@@ -15,16 +15,8 @@ body {
   text-align: center;
   padding: 3rem 1rem;
 }
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
+.hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.hero p { font-size: 1.2rem; font-weight: 500; }
 
 /* セクション共通 */
 .section {
@@ -32,7 +24,6 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
-
 .section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -48,7 +39,6 @@ body {
   padding-left: 0;
   gap: 1rem;
 }
-
 .tech-list li {
   background-color: #ffe9d6;
   padding: 0.5rem 1rem;
@@ -57,29 +47,15 @@ body {
 }
 
 /* プロジェクト一覧 */
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
+.projects { display: flex; flex-direction: column; gap: 2rem; }
 .project {
   background-color: #fff7f2;
   padding: 1.5rem;
   border-left: 4px solid #f4a261;
   border-radius: 6px;
 }
-
-.project h3 {
-  margin-top: 0;
-  color: #3d2b1f;
-  font-size: 1.3rem;
-}
-
-.project p {
-  margin-bottom: 1rem;
-}
-
+.project h3 { margin-top: 0; color: #3d2b1f; font-size: 1.3rem; }
+.project p { margin-bottom: 1rem; }
 .project img {
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
@@ -88,61 +64,40 @@ body {
   height: auto;
 }
 
-/* CTAリンク（プロジェクト詳細） */
-.project a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: white;
+/* —— ここから：CTAボタンをサイト全体で統一 —— */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  color: #fff;
   background: linear-gradient(90deg, #f4a261, #e76f51);
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: all 0.2s ease;
-}
-
-.project a:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(90deg, #e76f51, #f4a261);
-}
-
-/* 共通ボタン（フォーム遷移用） */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(231,111,81,.18);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
   cursor: pointer;
 }
-
-.btn-primary {
-  background: linear-gradient(90deg, #f4a261, #e76f51);
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, #e76f51, #f4a261);
+.cta:hover {
   transform: translateY(-2px);
+  background: linear-gradient(90deg, #e76f51, #f4a261);
+  box-shadow: 0 10px 18px rgba(231,111,81,.22);
 }
-
-.btn:focus-visible {
-  outline: 3px solid rgba(231, 111, 81, 0.35);
+.cta:focus-visible {
+  outline: 3px solid rgba(231,111,81,.35);
   outline-offset: 2px;
 }
+.cta--lg { padding: 1rem 1.8rem; font-size: 1.05rem; }
+/* —— ここまで：CTA統一 —— */
 
-/* セクション：フィードバック / 無料診断 */
-#feedback,
-#diagnosis {
+/* セクション：フィードバック / 無料診断（同一トーンで区切る） */
+#feedback, #diagnosis {
   background-color: #fffbe6;
   border-top: 2px solid #f4c095;
   border-bottom: 2px solid #f4c095;
 }
-
 #feedback p:last-of-type,
 #diagnosis p:last-of-type {
   font-size: 0.9rem;
@@ -157,51 +112,25 @@ body {
   text-align: center;
   padding: 2.5rem 1rem;
 }
-
-.footer h2 {
-  margin-bottom: 0.5rem;
-}
-
-.contact-links {
-  margin-top: 1rem;
-}
-
+.footer h2 { margin-bottom: 0.5rem; }
+.contact-links { margin-top: 1rem; }
 .contact-links a {
   margin: 0 1rem;
   color: #7b341e;
   text-decoration: none;
   font-weight: bold;
 }
-
-.contact-links a:hover {
-  text-decoration: underline;
-}
+.contact-links a:hover { text-decoration: underline; }
 
 /* モバイル対応 */
 @media (max-width: 600px) {
-  .tech-list {
-    flex-direction: column;
-  }
-
-  .contact-links a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .section {
-    padding: 2rem 1rem 3rem;
-  }
+  .tech-list { flex-direction: column; }
+  .contact-links a { display: block; margin: 0.5rem 0; }
+  .hero h1 { font-size: 2rem; }
+  .section { padding: 2rem 1rem 3rem; }
 }
 
 /* アニメーションを控えめに（環境配慮） */
 @media (prefers-reduced-motion: reduce) {
-  .project a,
-  .btn {
-    transition: none;
-    transform: none;
-  }
+  .cta { transition: none; transform: none; }
 }
