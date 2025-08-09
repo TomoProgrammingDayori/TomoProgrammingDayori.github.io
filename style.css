@@ -65,31 +65,35 @@ body {
 }
 
 /* —— ここから：CTAボタンをサイト全体で統一 —— */
+/* 統一CTA：以前の「.project a」と同じ仕上がりに */
 .cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;           /* 以前と同じ厚み */
   border-radius: 999px;
   font-weight: 700;
   letter-spacing: .02em;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(90deg, #f4a261, #e76f51);
-  box-shadow: 0 6px 14px rgba(231,111,81,.18);
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-  cursor: pointer;
+  background: linear-gradient(90deg, #f4a261, #e76f51);  /* 同じグラデ */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);                 /* 同じ影 */
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+  -webkit-tap-highlight-color: transparent;              /* モバイルのにじみ防止 */
 }
+
 .cta:hover {
   transform: translateY(-2px);
-  background: linear-gradient(90deg, #e76f51, #f4a261);
-  box-shadow: 0 10px 18px rgba(231,111,81,.22);
+  background: linear-gradient(90deg, #e76f51, #f4a261);  /* 反転アニメ */
+  box-shadow: 0 6px 14px rgba(231,111,81,.22);           /* 浮遊感を少し強調 */
 }
+
 .cta:focus-visible {
   outline: 3px solid rgba(231,111,81,.35);
   outline-offset: 2px;
 }
-.cta--lg { padding: 1rem 1.8rem; font-size: 1.05rem; }
+
+/* 重要度だけ強めたい場合（任意）：ほんの少しだけ大きく */
+.cta--lg { padding: 0.75rem 1.4rem; font-size: 1.03rem; }
+
 /* —— ここまで：CTA統一 —— */
 
 /* セクション：フィードバック / 無料診断（同一トーンで区切る） */
