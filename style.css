@@ -107,6 +107,49 @@ body {
   background: linear-gradient(90deg, #e76f51, #f4a261);
 }
 
+/* 共通ボタン（フォーム遷移用） */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #f4a261, #e76f51);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #e76f51, #f4a261);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(231, 111, 81, 0.35);
+  outline-offset: 2px;
+}
+
+/* セクション：フィードバック / 無料診断 */
+#feedback,
+#diagnosis {
+  background-color: #fffbe6;
+  border-top: 2px solid #f4c095;
+  border-bottom: 2px solid #f4c095;
+}
+
+#feedback p:last-of-type,
+#diagnosis p:last-of-type {
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  color: #5c4432;
+}
+
 /* フッター（お問い合わせ） */
 .footer {
   background-color: #fbe9e7;
@@ -154,27 +197,11 @@ body {
   }
 }
 
-/* フィードバックセクション */
-#feedback {
-  background-color: #fffbe6;
-  border-top: 2px solid #f4c095;
-  border-bottom: 2px solid #f4c095;
-}
-
-/* フォームのiframe調整 */
-#feedback iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 635px;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  border-radius: 6px;
-  margin-top: 1.5rem;
-}
-
-/* フォーム下の補足テキスト */
-#feedback p:last-of-type {
-  font-size: 0.9rem;
-  margin-top: 0.8rem;
-  color: #5c4432;
+/* アニメーションを控えめに（環境配慮） */
+@media (prefers-reduced-motion: reduce) {
+  .project a,
+  .btn {
+    transition: none;
+    transform: none;
+  }
 }
