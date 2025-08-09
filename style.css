@@ -61,13 +61,11 @@ body {
 }
 .project h3 { margin-top: 0; color: #3d2b1f; font-size: 1.3rem; }
 .project p  { margin-bottom: 1rem; }
+/* 画像の比率確保（CLS防止） */
 .project img {
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
-  margin-top: 1rem;
-  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9; /* CLS防止 */
   object-fit: cover;
 }
 
