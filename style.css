@@ -1,6 +1,8 @@
-/* 共通設定 */
+/* ========== Base ========== */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI",
+               "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+               Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -8,19 +10,22 @@ body {
   color: #333;
 }
 
-/* ヘッダー（トップメッセージ） */
+/* ========== Hero ========== */
 .hero {
   background-color: #fff2e6;
   color: #4a322d;
   text-align: center;
   padding: 3rem 1rem;
 }
-.hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.hero p { font-size: 1.2rem; font-weight: 500; }
+/* 本文と同じ最大幅に揃える */
+.hero > * { max-width: 900px; margin-left: auto; margin-right: auto; }
 
-/* セクション共通 */
+.hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.hero p  { font-size: 1.2rem; font-weight: 500; }
+
+/* ========== Section ========== */
 .section {
-  padding: 3rem 1.5rem 5rem;
+  padding: 3rem 1.5rem 4rem;  /* 5rem → 4rem に微調整 */
   max-width: 900px;
   margin: 0 auto;
 }
@@ -31,7 +36,7 @@ body {
   display: inline-block;
 }
 
-/* 技術スタック */
+/* ========== Tech List ========== */
 .tech-list {
   display: flex;
   flex-wrap: wrap;
@@ -46,8 +51,9 @@ body {
   font-size: 1rem;
 }
 
-/* プロジェクト一覧 */
+/* ========== Projects ========== */
 .projects { display: flex; flex-direction: column; gap: 2rem; }
+
 .project {
   background-color: #fff7f2;
   padding: 1.5rem;
@@ -55,7 +61,7 @@ body {
   border-radius: 6px;
 }
 .project h3 { margin-top: 0; color: #3d2b1f; font-size: 1.3rem; }
-.project p { margin-bottom: 1rem; }
+.project p  { margin-bottom: 1rem; }
 .project img {
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
@@ -64,39 +70,38 @@ body {
   height: auto;
 }
 
-/* —— ここから：CTAボタンをサイト全体で統一 —— */
-/* 統一CTA：以前の「.project a」と同じ仕上がりに */
+/* ========== CTA（全サイトで統一） ========== */
+/* 以前の .project a と同じ質感を標準化 */
 .cta {
   display: inline-block;
-  padding: 0.6rem 1.2rem;           /* 以前と同じ厚み */
+  padding: 0.6rem 1.2rem;
   border-radius: 999px;
   font-weight: 700;
   letter-spacing: .02em;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(90deg, #f4a261, #e76f51);  /* 同じグラデ */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);                 /* 同じ影 */
+  background: linear-gradient(90deg, #f4a261, #e76f51);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-  -webkit-tap-highlight-color: transparent;              /* モバイルのにじみ防止 */
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
-
 .cta:hover {
   transform: translateY(-2px);
-  background: linear-gradient(90deg, #e76f51, #f4a261);  /* 反転アニメ */
-  box-shadow: 0 6px 14px rgba(231,111,81,.22);           /* 浮遊感を少し強調 */
+  background: linear-gradient(90deg, #e76f51, #f4a261);
+  box-shadow: 0 6px 14px rgba(231,111,81,.22);
 }
-
+.cta:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 3px 10px rgba(231,111,81,.18);
+}
 .cta:focus-visible {
   outline: 3px solid rgba(231,111,81,.35);
   outline-offset: 2px;
 }
-
-/* 重要度だけ強めたい場合（任意）：ほんの少しだけ大きく */
 .cta--lg { padding: 0.75rem 1.4rem; font-size: 1.03rem; }
 
-/* —— ここまで：CTA統一 —— */
-
-/* セクション：フィードバック / 無料診断（同一トーンで区切る） */
+/* ========== Feedback / Diagnosis ========== */
 #feedback, #diagnosis {
   background-color: #fffbe6;
   border-top: 2px solid #f4c095;
@@ -109,7 +114,7 @@ body {
   color: #5c4432;
 }
 
-/* フッター（お問い合わせ） */
+/* ========== Footer ========== */
 .footer {
   background-color: #fbe9e7;
   color: #4a322d;
@@ -126,15 +131,15 @@ body {
 }
 .contact-links a:hover { text-decoration: underline; }
 
-/* モバイル対応 */
+/* ========== Responsive ========== */
 @media (max-width: 600px) {
   .tech-list { flex-direction: column; }
   .contact-links a { display: block; margin: 0.5rem 0; }
   .hero h1 { font-size: 2rem; }
-  .section { padding: 2rem 1rem 3rem; }
+  .section { padding: 2rem 1rem 3rem; } /* モバイルはさらに軽く */
 }
 
-/* アニメーションを控えめに（環境配慮） */
+/* ========== Reduce Motion ========== */
 @media (prefers-reduced-motion: reduce) {
   .cta { transition: none; transform: none; }
 }
